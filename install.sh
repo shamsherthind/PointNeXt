@@ -21,12 +21,12 @@ git submodule update --remote --merge # update to the latest version
 # install PyTorch
 conda deactivate
 conda env remove --name openpoints
-conda create -n openpoints -y python=3.7 numpy=1.20 numba
+conda create -n openpoints -y python=3.9 numpy numba
 conda activate openpoints
 
 # please always double check installation for pytorch and torch-scatter from the official documentation
-conda install -y pytorch=1.10.1 torchvision cudatoolkit=11.3 -c pytorch -c nvidia
-pip install torch-scatter -f https://data.pyg.org/whl/torch-1.10.1+cu113.html
+conda install -y pytorch=2.0.0  torchvision cudatoolkit=11.7 -c pytorch -c nvidia
+pip install torch-scatter -f https://data.pyg.org/whl/torch-2.0.0+cu117.html
 
 pip install -r requirements.txt
 
