@@ -1,14 +1,14 @@
-scikit-learn==1.0.2
-pickleshare==0.7.5
+scikit-learn
+pickleshare
 ninja==1.10.2.3
 gdown
-easydict==1.9
-PyYAML==6.0
+easydict
+PyYAML
 protobuf==3.19.4
 tensorboard==2.8.0
-termcolor==1.1.0
+termcolor
 tqdm==4.62.3
-multimethod==1.7
+multimethod
 h5py==3.6.0
 matplotlib==3.5.1
 wandb
@@ -16,6 +16,7 @@ pyvista
 setuptools==59.5.0
 Cython==0.29.28
 pandas
+torch==2.0.0
 deepspeed
 shortuuid
 
