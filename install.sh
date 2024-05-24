@@ -23,6 +23,7 @@ conda deactivate
 conda env remove --name openpoints
 conda create -n openpoints -y python=3.9 numpy numba
 conda activate openpoints
+conda init bash
 
 # please always double check installation for pytorch and torch-scatter from the official documentation
 conda install -y pytorch=2.0.0  torchvision cudatoolkit=11.7 -c pytorch -c nvidia
