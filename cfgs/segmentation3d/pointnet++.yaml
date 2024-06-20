@@ -36,7 +36,7 @@ model:
     fp_mlps: [[128, 128, 128], [256, 128], [256, 256], [256, 256]]
   cls_args:
     NAME: SegHead
-    num_classes: 13
+    num_classes: 4
     in_channels: null
 
 datatransforms:

@@ -14,7 +14,7 @@ model:
     is_seg: True
   cls_args:
     NAME: SegHead
-    num_classes: 13
+    num_classes: 4
     mlps: [512, 256, 128, 128]
 
 datatransforms:
