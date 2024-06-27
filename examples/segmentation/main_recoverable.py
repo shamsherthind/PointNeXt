@@ -545,6 +545,7 @@ def test(model, data_list, cfg, num_votes=1):
     cfg.visualize = cfg.get('visualize', False)
     if cfg.visualize:
         from openpoints.dataset.vis3d import write_obj
+        from openpoints.dataset.vis3d import write_las
         cfg.vis_dir = os.path.join(cfg.run_dir, 'visualization')
         os.makedirs(cfg.vis_dir, exist_ok=True)
         cfg.cmap = cfg.cmap.astype(np.float32) / 255.
@@ -642,13 +643,20 @@ def test(model, data_list, cfg, num_votes=1):
 
             write_obj(coord, feat,
                       os.path.join(cfg.vis_dir, f'input-{file_name}.obj'))
+
+            write_las(coord, feat,
+                      os.path.join(cfg.vis_dir, f'input-{file_name}.las'))
             # output ground truth labels
             if gt is not None:
                 write_obj(coord, gt,
                         os.path.join(cfg.vis_dir, f'gt-{file_name}.obj'))
+                write_las(coord, gt,
+                      os.path.join(cfg.vis_dir, f'gt-{file_name}.las'))
             # output pred labels
             write_obj(coord, pred,
                       os.path.join(cfg.vis_dir, f'{cfg.cfg_basename}-{file_name}.obj'))
+            write_las(coord, pred,
+                      os.path.join(cfg.vis_dir, f'{cfg.cfg_basename}-{file_name}.las'))
 
         if cfg.get('save_pred', False):
             if 'semantickitti' in cfg.dataset.common.NAME.lower():

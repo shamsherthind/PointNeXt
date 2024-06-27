@@ -19,6 +19,7 @@ pandas
 torch==2.0.0
 deepspeed
 shortuuid
+laspy
 
 # for docs
 mkdocs-material
