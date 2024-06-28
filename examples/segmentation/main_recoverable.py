@@ -48,7 +48,7 @@ def generate_data_list(cfg):
         data_list = [os.path.join(raw_root, item) for item in data_list if
                      'Area_{}'.format(cfg.dataset.common.test_area) in item]
     elif 'segment3d' in cfg.dataset.common.NAME.lower():
-        raw_root = os.path.join(cfg.dataset.common.data_root, 'raw')
+        raw_root = os.path.join(cfg.dataset.common.data_root, 'test')
         data_list = sorted(os.listdir(raw_root))
         data_list = [os.path.join(raw_root, item) for item in data_list ]
     elif 'scannet' in cfg.dataset.common.NAME.lower():
