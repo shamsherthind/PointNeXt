@@ -74,7 +74,7 @@ def load_data(data_path, cfg):
     elif 'segment3d' in cfg.dataset.common.NAME.lower():
         data = np.load(data_path)  # xyzrgbl, N*7
         coord, feat, label = data[:, :3], data[:, 3:6], data[:, 6]
-        feat = np.clip(feat, 0, 1).astype(np.float32)        
+        feat = np.clip(feat/65535.0, 0, 1).astype(np.float32)        
     elif 'scannet' in cfg.dataset.common.NAME.lower():
         data = torch.load(data_path)  # xyzrgbl, N*7
         coord, feat = data[0], data[1]
