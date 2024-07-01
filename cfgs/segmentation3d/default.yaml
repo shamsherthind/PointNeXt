@@ -1,7 +1,7 @@
 # data augmentation
 dataset:
   common:
-    NAME: SEGMENT3D
+    NAME: 100
     data_root: data/S3DIS
     test_area: 5
     voxel_size: 0.04
@@ -44,7 +44,7 @@ datatransforms:
 # ---------------------------------------------------------------------------- #
 val_fn: validate
 ignore_index: null 
-epochs: 100
+epochs: 1000
 
 cls_weighed_loss: False
 
