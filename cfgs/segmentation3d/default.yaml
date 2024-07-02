@@ -44,7 +44,7 @@ datatransforms:
 # ---------------------------------------------------------------------------- #
 val_fn: validate
 ignore_index: null 
-epochs: 700
+epochs: 1000
 
 cls_weighed_loss: False
 
